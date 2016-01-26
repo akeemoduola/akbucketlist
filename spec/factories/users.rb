@@ -5,5 +5,4 @@ FactoryGirl.define do
     password {Faker::Internet.password(6)}
     active false
   end
-
 end

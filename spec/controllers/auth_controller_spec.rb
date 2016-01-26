@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+<<<<<<< HEAD
 RSpec.describe Api::V1::AuthController, type: :controller do
   before(:each) do
     @user = FactoryGirl.create :user
@@ -38,10 +39,19 @@ RSpec.describe Api::V1::AuthController, type: :controller do
       it "returns a 401 http status" do
         expect(response).to have_http_status(401)
       end
+=======
+RSpec.describe AuthController, type: :controller do
+
+  describe "GET #login" do
+    it "returns http success" do
+      get :login
+      expect(response).to have_http_status(:success)
+>>>>>>> 29dc53b... Token Based Authentication
     end
   end
 
   describe "GET #logout" do
+<<<<<<< HEAD
     before(:each) do
       credentials = { email: @user.email, password: @user.password }
       post :login, { params: credentials }
@@ -60,4 +70,12 @@ RSpec.describe Api::V1::AuthController, type: :controller do
       expect(response).to have_http_status(401)
     end
   end
+=======
+    it "returns http success" do
+      get :logout
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+>>>>>>> 29dc53b... Token Based Authentication
 end
