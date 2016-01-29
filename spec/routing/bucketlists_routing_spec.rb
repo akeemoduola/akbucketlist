@@ -1,4 +1,5 @@
 require "rails_helper"
+
 RSpec.describe Api::V1::BucketlistsController, type: :routing do
   describe "routing" do
 

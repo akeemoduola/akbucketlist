@@ -85,5 +85,9 @@ production:
   <<: *default
   database: matbucketlist_production
   # username: matbucketlist
+<<<<<<< HEAD
   #username: 'oakeem'
+=======
+  username: 'oakeem'
+>>>>>>> 6bce877... API Testing & Documentation
   password: <%= ENV['MATBUCKETLIST_DATABASE_PASSWORD'] %>

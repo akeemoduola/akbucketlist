@@ -1,6 +1,6 @@
 class ItemSerializer < ActiveModel::Serializer
   attributes :id, :name, :date_created, :date_modified, :done
-  
+
   def date_created
     date = object.created_at
     date.strftime("%F %T")
