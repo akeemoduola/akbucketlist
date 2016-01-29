@@ -16,7 +16,7 @@ RSpec.describe Api::V1::ItemsController, type: :request do
 
       it "renders the json representation for the item record just created" do
         @json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(@json_response[:name]).to eql @item[:name]
+        expect(@json_response[:message]).to eql "Item successfully created."
       end
 
       it "returns a 201 http status" do

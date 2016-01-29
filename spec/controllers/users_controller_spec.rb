@@ -10,7 +10,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
 
       it "renders the json representation for the user record just created" do
         user_response = json_response
-        expect(user_response[:email]).to eql @user_attributes[:email]
+        expect(user_response[:message]).to eql "Account Created Successfully"
       end
 
       it "returns a 201 http status" do
