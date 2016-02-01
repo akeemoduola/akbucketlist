@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       post 'auth/login'
       get 'auth/logout'
       resources :users, :only => ["create"]
+      match ":not_found" => "auth#invalid_endpoint", via: :all, constraints: { not_found: /.*/ }
     end
   end
 end
