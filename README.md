@@ -1,10 +1,6 @@
 # MatBucketList
 
-<<<<<<< HEAD
 [![Circle CI](https://circleci.com/gh/andela-aoduola/matbucketlist.svg?style=svg)](https://circleci.com/gh/andela-aoduola/matbucketlist)
-=======
-[![Circle CI](https://circleci.com/gh/andela-aoduola/matbucketlist/tree/ft-api-documentation-111680762.svg?style=svg)](https://circleci.com/gh/andela-aoduola/matbucketlist/tree/ft-api-documentation-111680762)
->>>>>>> 6bce877... API Testing & Documentation
 
 [![Coverage Status](https://coveralls.io/repos/github/andela-aoduola/matbucketlist/badge.svg?branch=ft-api-documentation-111680762)](https://coveralls.io/github/andela-aoduola/matbucketlist?branch=ft-api-documentation-111680762)
 
@@ -26,11 +22,7 @@ The endpoints that the API provides are listed below:
 | GET  | /bucketlists/ | Lists all the created bucket lists
 | GET | /bucketlists/:id | Gets single bucket list
 | GET | /bucketlists?q=name | Gets bucket list with the name specified
-<<<<<<< HEAD
 | GET | /bucketlists?page=2&limit=20 | Paginates your bucket lists.
-=======
-| GET | /bucketlists?page=2&limit=23 | Paginates your bucket lists.
->>>>>>> 6bce877... API Testing & Documentation
 | PUT | /bucketlists/:id | Updates this bucket list
 | DELETE | /bucketlists/:id | Deletes this single bucket list
 | POST | /bucketlists/:id/items/ | Creates a new item in bucket list
@@ -75,12 +67,7 @@ All operations of a user are only within the scope of the users' bucket list(s) 
 * To get a bucketlist with a particular id, access `[GET /bucketlists?q=name]`
 
   This fetches the bucket list with the specified name.
-
-<<<<<<< HEAD
 * To get a bucketlist with a particular id, access `[GET /bucketlists?page=2&limit=2]`
-=======
-* To get a bucketlist with a particular id, access `[GET /bucketlists?page=2&limit=23]`
->>>>>>> 6bce877... API Testing & Documentation
 
   Gets bucket lists and paginates them as stated. In this case, it lists 23 bucket lists per page.
 
@@ -101,13 +88,7 @@ All operations of a user are only within the scope of the users' bucket list(s) 
 * To update a bucketlist item, access `[PUT /bucketlists/:bucketlist_id/items/:id] ` with the following parameters:
 
   `name - name of your bucketlist item`
-<<<<<<< HEAD
   `done - status of your bucketlist item, default is false`
-=======
-
-  `status - This states whether you have achieved or done this particular item. Defaults to false. Only change to true if you want to check it as done.`
-
->>>>>>> 6bce877... API Testing & Documentation
 
 * To delete a bucketlist item, access `[DELETE /bucketlists/:bucketlist_id/items/:id]`.
 
