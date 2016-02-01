@@ -1,6 +1,6 @@
 # MatBucketList
 
-[![Circle CI](https://circleci.com/gh/andela-aoduola/matbucketlist/tree/ft-api-documentation-111680762.svg?style=svg)](https://circleci.com/gh/andela-aoduola/matbucketlist/tree/ft-api-documentation-111680762)
+[![Circle CI](https://circleci.com/gh/andela-aoduola/matbucketlist.svg?style=svg)](https://circleci.com/gh/andela-aoduola/matbucketlist)
 
 [![Coverage Status](https://coveralls.io/repos/github/andela-aoduola/matbucketlist/badge.svg?branch=ft-api-documentation-111680762)](https://coveralls.io/github/andela-aoduola/matbucketlist?branch=ft-api-documentation-111680762)
 
