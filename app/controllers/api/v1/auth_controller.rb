@@ -9,7 +9,8 @@ module Api
           user.update_attribute(:active, true)
           render json: { token: user.generate_jwt_token }
         else
-          render json: { error: "Invalid email or password" }, status: :unauthorized
+          render json: { error: "Invalid email or password" },
+                 status: :unauthorized
         end
       end
 
@@ -19,7 +20,8 @@ module Api
       end
 
       def invalid_endpoint
-        render json: { message: "Specified endpoint does not exist.\r\nPlease check the API doc for clarification." },
+        render json: { message: "Specified endpoint does not exist.
+                      \r\nPlease check the API doc for clarification." },
                status: 404
       end
     end

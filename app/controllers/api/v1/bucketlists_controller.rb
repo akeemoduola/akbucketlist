@@ -8,8 +8,8 @@ module Api
         @page = params[:page].to_i < 1 ? 1 : params[:page].to_i
         @limit = params[:limit].to_i < 1 ? 20 : params[:limit].to_i
         @offset = (@page - 1) * @limit
-        @bucketlists = @current_user.bucketlists.search(params[:q]).limit(@limit)
-                        .offset(@offset).order(:id)
+        @bucketlists = @current_user.bucketlists.search(params[:q]).
+                       limit(@limit).offset(@offset).order(:id)
 
         render json: @bucketlists
       end
@@ -24,7 +24,8 @@ module Api
         @bucketlist = @current_user.bucketlists.new(bucketlist_params)
         @bucketlist.created_by = @current_user.id
         if @bucketlist.save
-          render json: { message: "Bucketlist successfully created." }, status: :created
+          render json: { message: "Bucketlist successfully created." },
+                 status: :created
         else
           render json: @bucketlist.errors, status: :unprocessable_entity
         end
@@ -33,7 +34,7 @@ module Api
       # PATCH/PUT /bucketlists/1
       def update
         if @bucketlist.update(bucketlist_params)
-          render json: { "message": "Bucketlist updated!" }, status: 200
+          render json: { message: "Bucketlist updated!" }, status: 200
         else
           render json: @bucketlist.errors, status: :unprocessable_entity
         end

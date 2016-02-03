@@ -9,7 +9,8 @@ module Api
         @item = @bucketlist.items.new(item_params)
 
         if @item.save
-          render json: { message: "Item successfully created." }, status: :created
+          render json: { message: "Item successfully created." },
+                 status: :created
         else
           render json: @item.errors, status: :unprocessable_entity
         end
@@ -31,7 +32,7 @@ module Api
       end
 
       private
-      # Use callbacks to share common setup or constraints between actions.
+
       def set_item
         @item = @bucketlist.items.find_by_id(params[:id])
         if @item.blank?
